@@ -107,8 +107,8 @@ def otpinp():
 	ip=request.remote_addr
 	if not ip==ip1:
 		print("Email check: IP Mismatch")
-		return redirect("/logout")
-	uname1=getUsernameFromToken(tok)
+
+		uname1=getUsernameFromToken(tok)
 	print(tok,uname,uname1)
 	deleteToken(tok)
 	print(uname, uname1)
